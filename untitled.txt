@@ -1,0 +1,69 @@
+Linear Regression for House Price Prediction
+
+Step 1: The Data
+
+Size (sq.ft)	Price (₹ in lakhs)
+
+ 500              25
+ 1000             50
+ 1500             75
+ 2000             100
+ 2500             125
+
+
+Step 2: Linear Regression Formula
+
+We try to fit a straight line:
+
+Price = m \times Size + c
+
+Here:
+
+m = slope = how much price increases when size increases.
+
+c = intercept (price when size is 0).
+
+
+From data, it looks like every 500 sq.ft adds ₹25 lakh.
+So slope m = 25 / 500 = 0.05.
+Also when size = 0 → price = 0, so c = 0.
+
+So equation is:
+
+Price = 0.05 \times Size
+
+
+
+Step 3: Prediction Example
+
+For a house of size 2200 sq.ft:
+
+
+Price = 0.05 \times 2200 = 110 \text{ lakhs}
+
+
+Step 4: Epoch vs Accuracy Concept
+
+Epoch = one round of training (algorithm looks at all data once).
+
+With each epoch, the model’s accuracy improves until it stabilizes.
+
+
+A simple graph:
+
+X-axis → Epochs (1, 2, 3, 4, 5 …)
+
+Y-axis → Accuracy (0.6, 0.7, 0.8 … 1.0)
+
+
+Draw a curve that goes up and then becomes flat:
+
+Accuracy |
+    1.0  |                 _________
+    0.9  |              __/
+    0.8  |           __/
+    0.7  |        __/
+    0.6  |     __/
+    0.5  |/
+         ------------------------------
+             1   2   3   4   5   Epoch
